@@ -1,38 +1,157 @@
-.App {
-  text-align: center;
+header {
+    width: 100%;
+    background-color: gold;
+}
+.menu-container{
+    width: 80%;
+    height: 60px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.menu-container nav > .navbar {
+    display: flex;
+    gap: 20px;
+    list-style: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar > .nav-item {
+    cursor: pointer;
+}
+.nav-item > .nav-link, #logo a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* body section */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+    overflow-x: hidden;
+}
+.row {
+    width: 100%;
+    position: relative;
 }
 
-.App-link {
-  color: #61dafb;
+.title {
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+    font-size: 1rem;
+    color: #666;
+}
+.form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form .form-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-group input {
+    padding: 10px;
+    font-size: 1.1em;
+    /* outline: none; */
+    border-bottom: 2.5px solid #222;
+}
+
+.form-group button {
+    padding: 10px 12px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border: 1px solid #222;
+    background-color: #222;
+    color: #fff;
+}
+
+/* No user */
+.no-user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.no-user h3 {
+    color: #ff3300;
+}
+
+.no-user h1 {
+    color: #343;
+}
+
+/* user profile section */
+.profile {
+    width: 100%;
+    overflow-x: hidden;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.profile .card {
+    width: 60%;
+    margin: auto;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    gap: 30px;
+    background-color: #ddd;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.card .card-header {
+    width: 200px;
+    height: 200px;
+}
+
+.card-header img  {
+    width: 200px;
+   border-radius: 50%;
+    object-fit: cover;
+}
+
+.card-body ul li  {
+     list-style: none;
+     padding: 10px;
+     justify-content: space-between;
+     display: flex;
+     align-items: center;
+     font-size: 1.1em;
+}
+
+li strong {
+    background-color: #343;
+    color: #000;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+li span {
+    color: #000;
+}
+
+@media screen and (max-width:886px) {
+    .profile .card {
+        width: 100%;
+        transition: all 0.3s ease;
+    }
+}
+
+.repo-container {
+    width: 50%;
 }
